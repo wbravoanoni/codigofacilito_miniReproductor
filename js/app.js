@@ -6,7 +6,7 @@ getSongs();
 
 });
 
-var audio;
+var audio=document.getElementById("player");
 var music;
 
 function getSongs(){
@@ -18,6 +18,14 @@ console.log(music);
 });
 }
 
+function playSong(id){
+
+console.log(id);
+$("#img-album").attr("src",music.songs[id].image);
+$("#player").attr("src",music.songs[id].song);
+audio.play();
+}
+
 function genList(music){
 $.each(music.songs,function(i,song){
 $('#playlist').append('<li class="list-group-item" id="'+i+'">'+song.nombre+'</li>');
@@ -25,7 +33,7 @@ $('#playlist').append('<li class="list-group-item" id="'+i+'">'+song.nombre+'</l
 
 $("#playlist li").click(function(){
 var selectedSoung=$(this).attr('id');
-console.log(selectedSoung);
+playSong(selectedSoung);
 });
 
 }
