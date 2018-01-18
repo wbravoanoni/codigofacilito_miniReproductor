@@ -1,10 +1,35 @@
 {
 	"songs":[{
-
 		"id":0,
-		"nombre":"Chances",
+		"nombre":"Chances 0",
 		"artist":"",
 		"song":"music/chances.mpg",
 		"image":"images/logo.jpg"
-	}]
+	},
+
+	{
+		"id":1,
+		"nombre":"Chances 1",
+		"artist":"",
+		"song":"music/chances.mpg",
+		"image":"images/logo.jpg"
+	},
+
+	{
+		"id":2,
+		"nombre":"Chances 2",
+		"artist":"",
+		"song":"music/chances.mpg",
+		"image":"images/logo.jpg"
+	},
+
+	{
+		"id":3,
+		"nombre":"Chances 3",
+		"artist":"",
+		"song":"music/chances.mpg",
+		"image":"images/logo.jpg"
+	}
+
+]
 }
