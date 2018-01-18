@@ -20,10 +20,22 @@ console.log(music);
 
 function playSong(id){
 
-console.log(id);
-$("#img-album").attr("src",music.songs[id].image);
-$("#player").attr("src",music.songs[id].song);
-audio.play();
+	var long=music.songs;
+
+	if(id>=long.length){
+		console.log("Se acabo");
+		audio.pause();
+	}else{
+
+	$("#img-album").attr("src",music.songs[id].image);
+	$("#player").attr("src",music.songs[id].song);
+	audio.play();	
+	console.log("Hay mas canciones");
+	sheduleSong(id)
+
+}
+
+
 }
 
 function genList(music){
@@ -35,5 +47,13 @@ $("#playlist li").click(function(){
 var selectedSoung=$(this).attr('id');
 playSong(selectedSoung);
 });
+
+}
+
+function sheduleSong(id){
+audio.onended=function(){
+	console.log("Termino la cancion");
+	playSong(parseInt(id+1));
+}
 
 }
