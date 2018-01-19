@@ -1,5 +1,5 @@
 $(document).ready(function(){
-
+initPlayer();
 
 getSongs();
 
@@ -8,6 +8,16 @@ getSongs();
 
 var audio=document.getElementById("player");
 var music;
+
+
+function initPlayer(){
+	$("#shuffle").click(function(){
+		$("#playlist").empty();
+		console.log(shuffle(music.songs));
+		genList(music);
+		playSong(0);
+	});
+}
 
 function getSongs(){
 $.getJSON("js/app.json",function(mjson){
@@ -57,3 +67,13 @@ audio.onended=function(){
 }
 
 }
+
+function shuffle(array){
+for(var random,temp,position=array.length;position;random=Math.floor(Math.random()*position),temp=array[--position],array[position]=array[random],array[random]=temp);
+return array;
+
+
+}
+
+
+

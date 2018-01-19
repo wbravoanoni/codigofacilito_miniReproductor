@@ -25,10 +25,10 @@
 
 	{
 		"id":3,
-		"nombre":"Chances 3",
-		"artist":"",
-	    "song":"music/Kalimba.mp3",
-		"image":"image/song_4.png"
+		"nombre":"Breaking The Habit",
+		"artist":"Linkin Park",
+	    "song":"music/breaking_the_habit.mp3",
+		"image":"image/breaking_the_habit.gif"
 	}
 
 ]
